@@ -5,5 +5,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq.concat(
       Seq(
       ).map("com.typesafe.akka" %% _ % "2.8.0-M1"),
+      Seq(
+      ).map("com.typesafe.akka" %% _ % "10.5.0-M1"),
     ),
   )
