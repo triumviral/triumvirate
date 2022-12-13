@@ -5,6 +5,7 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq.concat(
       Seq(
         "akka-actor-typed",
+        "akka-stream-typed",
       ).map("com.typesafe.akka" %% _ % "2.8.0-M1"),
       Seq(
         "akka-http",
