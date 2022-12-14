@@ -1,6 +1,7 @@
 lazy val root = project
   .in(file("."))
   .settings(
+    scalaVersion := dottyLatestNightlyBuild.get,
     name := "triumvirate",
     libraryDependencies ++= Seq.concat(
       Seq(
