@@ -6,6 +6,7 @@ lazy val root = (project in file("."))
       Seq(
         "akka-actor-typed",
         "akka-stream-typed",
+        "akka-persistence-typed",
       ).map("com.typesafe.akka" %% _ % "2.8.0-M1"),
       Seq(
         "akka-http",
