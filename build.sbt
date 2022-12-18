@@ -13,6 +13,7 @@ lazy val root = project
         "akka-http",
       ).map("com.typesafe.akka" %% _ % "10.5.0-M1"),
       Seq(
+        "org.redisson" % "redisson" % "3.19.0",
       ),
     ),
   )
