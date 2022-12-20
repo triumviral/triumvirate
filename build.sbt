@@ -8,7 +8,7 @@ lazy val root = project
         "akka-actor-typed",
         "akka-stream-typed",
         "akka-persistence-typed",
-      ).map("com.typesafe.akka" %% _ % "2.8.0-M1"),
+      ).map("com.typesafe.akka" %% _ % "2.8.0-M2"),
       Seq(
         "akka-http",
       ).map("com.typesafe.akka" %% _ % "10.5.0-M1"),
