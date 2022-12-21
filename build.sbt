@@ -1,5 +1,5 @@
 fork := true
-javaOptions := Seq(
+javaOptions ++= Seq(
   "-Dconfig.resource=configuration.conf",
 )
 lazy val root = project
