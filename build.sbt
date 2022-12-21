@@ -15,6 +15,7 @@ lazy val root = project
       Seq(
         "org.redisson" % "redisson" % "3.19.0",
         "ch.qos.logback" % "logback-classic" % "1.4.5",
+        "com.typesafe" % "config" % "1.4.2",
       ),
     ),
   )
