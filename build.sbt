@@ -1,4 +1,6 @@
 fork := true
+javaOptions := Seq(
+)
 lazy val root = project
   .in(file("."))
   .settings(
