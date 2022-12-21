@@ -20,6 +20,7 @@ lazy val root = project
         "org.redisson" % "redisson" % "3.19.0",
         "ch.qos.logback" % "logback-classic" % "1.4.5",
         "com.typesafe" % "config" % "1.4.2",
+        "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.14.1",
       ),
     ),
   )
