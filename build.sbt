@@ -1,5 +1,6 @@
 fork := true
 javaOptions := Seq(
+  "-Dconfig.resource=configuration.conf",
 )
 lazy val root = project
   .in(file("."))
