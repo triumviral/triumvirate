@@ -9,3 +9,5 @@ object Configuration:
 class Configuration(private val hocon: Config,
                     private val json: JsonMapper & ClassTagExtensions,
                    ):
+
+  import Configuration.*
