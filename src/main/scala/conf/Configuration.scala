@@ -15,6 +15,10 @@ object Configuration:
       .build() :: ClassTagExtensions,
   )
 
+  given[Cfg: Configurable]: Conversion[Configuration, Cfg] with
+    def apply(configuration: Configuration): Cfg =
+      configuration.configure[Cfg]
+
   private val options: ConfigRenderOptions = ConfigRenderOptions.concise()
 
 class Configuration(private val hocon: Config,
