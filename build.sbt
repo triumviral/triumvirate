@@ -3,6 +3,7 @@ javaOptions ++= Seq(
   "-Dconfig.resource=configuration.conf",
 )
 scalacOptions ++= Seq(
+  "-feature",
 )
 lazy val root = project
   .in(file("."))
