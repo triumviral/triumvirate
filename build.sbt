@@ -24,6 +24,7 @@ lazy val root = project
         "ch.qos.logback" % "logback-classic" % "1.4.5",
         "com.typesafe" % "config" % "1.4.2",
         "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.14.1",
+        "net.logstash.logback" % "logstash-logback-encoder" % "7.2",
       ),
     ),
   )
