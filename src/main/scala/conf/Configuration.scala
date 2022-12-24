@@ -11,7 +11,8 @@ object Configuration:
 
   def apply(): Configuration = new Configuration(
     hocon = ConfigFactory
-      .load(System.getProperty(config)),
+      .defaultApplication()
+      .getConfig(config),
     json = JsonMapper
       .builder()
       .addModule(DefaultScalaModule)
