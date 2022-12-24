@@ -1,6 +1,6 @@
 fork := true
 javaOptions ++= Seq(
-  "-Dconfig.resource=configuration.conf",
+  "-Dconfig.resource=cfg/application.conf",
 )
 scalacOptions ++= Seq(
   "-feature",
