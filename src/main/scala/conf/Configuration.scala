@@ -10,7 +10,8 @@ object Configuration:
   private val config: String = "cfg"
 
   def apply(): Configuration = new Configuration(
-    hocon = ConfigFactory.defaultApplication(),
+    hocon = ConfigFactory
+      .load(System.getProperty(config)),
     json = JsonMapper
       .builder()
       .addModule(DefaultScalaModule)
