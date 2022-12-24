@@ -7,8 +7,6 @@ import com.typesafe.config.{Config, ConfigFactory, ConfigRenderOptions}
 import scala.reflect.ClassTag
 
 object Configuration:
-  private val config: String = "cfg"
-
   def apply(): Configuration = new Configuration(
     hocon = ConfigFactory
       .defaultApplication()
