@@ -25,6 +25,7 @@ lazy val root = project
         "com.typesafe" % "config" % "1.4.2",
         "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.14.1",
         "net.logstash.logback" % "logstash-logback-encoder" % "7.2",
+        "org.codehaus.janino" % "janino" % "3.1.9",
       ),
     ),
   )
