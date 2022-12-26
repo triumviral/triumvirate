@@ -1,6 +1,7 @@
 fork := true
 javaOptions ++= Seq(
   "-Dconfig.resource=cfg/application.conf",
+  "-Dlogback.configurationFile=log/logback/logback.xml",
 )
 scalacOptions ++= Seq(
   "-feature",
