@@ -15,6 +15,6 @@
             <include resource="log/logback/appender/tcp/tcp.xml"/>
         </then>
     </if>
-    <root>
+    <root level="${root.level}">
     </root>
 </configuration>
