@@ -7,4 +7,11 @@
         <encoder class="LogstashEncoder">
         </encoder>
     </appender>
+    <if condition='property("root").contains("${tcp.appender.name}")'>
+        <then>
+            <root>
+                <appender-ref ref="${tcp.appender.name}"/>
+            </root>
+        </then>
+    </if>
 </included>
