@@ -10,4 +10,9 @@
             <include resource="log/logback/appender/file/file.xml"/>
         </then>
     </if>
+    <if condition='property("root").contains("tcp")'>
+        <then>
+            <include resource="log/logback/appender/tcp/tcp.xml"/>
+        </then>
+    </if>
 </configuration>
