@@ -12,6 +12,7 @@
                 <expression>${file.appender.filter.evaluator.expression}</expression>
             </evaluator>
             <onMatch>${file.appender.filter.on-match}</onMatch>
+            <onMismatch>${file.appender.filter.on-mismatch}</onMismatch>
         </filter>
         <encoder>
             <pattern>${file.appender.encoder.pattern}</pattern>
