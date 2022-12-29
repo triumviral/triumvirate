@@ -1,4 +1,5 @@
 <included>
+    <import class="net.logstash.logback.appender.LoggingEventAsyncDisruptorAppender"/>
     <variable resource="log/logback/appender/async/async.properties"/>
     <if condition='!property("root").contains("async.appender.appender-ref.ref")'>
         <then>
@@ -9,4 +10,6 @@
             </if>
         </then>
     </if>
+    <appender name="${async.appender.name}" class="LoggingEventAsyncDisruptorAppender">
+    </appender>
 </included>
