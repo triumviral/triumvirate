@@ -5,4 +5,9 @@
             <include resource="log/logback/appender/async/async.xml"/>
         </then>
     </if>
+    <if condition='property("root").contains("file")'>
+        <then>
+            <include resource="log/logback/appender/file/file.xml"/>
+        </then>
+    </if>
 </configuration>
