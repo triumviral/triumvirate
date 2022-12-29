@@ -3,6 +3,7 @@
     <variable resource="log/logback/appender/file/file.properties"/>
     <appender name="${file.appender.name}" class="FileAppender">
         <encoder>
+            <pattern>%msg%n</pattern>
         </encoder>
     </appender>
 </included>
