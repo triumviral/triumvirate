@@ -49,3 +49,4 @@ services:
       - elastic
 volumes:
   esdata:
+    driver: local
