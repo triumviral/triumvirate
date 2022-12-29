@@ -1,2 +1,3 @@
 <included>
+    <variable resource="log/logback/appender/tcp/tcp.properties"/>
 </included>
