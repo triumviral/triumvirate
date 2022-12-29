@@ -8,3 +8,4 @@ services:
       - xpack.security.enabled=false
       - xpack.security.enrollment.enabled=false
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
