@@ -27,7 +27,7 @@ lazy val root = project
         "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.14.1",
         "net.logstash.logback" % "logstash-logback-encoder" % "7.2",
         "org.codehaus.janino" % "janino" % "3.1.9",
-        "com.typesafe.akka" %% "akka-grpc" % "2.3.0-M1",
+        "com.lightbend.akka.grpc" %% "akka-grpc-runtime" % "2.3.0-M1",
       ),
     ),
   )
