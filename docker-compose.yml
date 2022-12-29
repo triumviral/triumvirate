@@ -53,3 +53,4 @@ volumes:
   kbdata:
     driver: local
 networks:
+  elastic:
