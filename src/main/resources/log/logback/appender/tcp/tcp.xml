@@ -1,7 +1,10 @@
 <included>
     <import class="net.logstash.logback.appender.LogstashTcpSocketAppender"/>
+    <import class="net.logstash.logback.encoder.LogstashEncoder"/>
     <variable resource="log/logback/appender/tcp/tcp.properties"/>
     <appender name="${tcp.appender.name}" class="LogstashTcpSocketAppender">
         <destination>${tcp.appender.destination}</destination>
+        <encoder class="LogstashEncoder">
+        </encoder>
     </appender>
 </included>
