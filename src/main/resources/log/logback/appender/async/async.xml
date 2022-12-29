@@ -2,6 +2,11 @@
     <variable resource="log/logback/appender/async/async.properties"/>
     <if condition='!property("root").contains("async.appender.appender-ref.ref")'>
         <then>
+            <if condition='property("async.appender.appender-ref.ref").contains("file")'>
+                <then>
+                    <include resource="log/logback/appender/file/file.xml"/>
+                </then>
+            </if>
         </then>
     </if>
 </included>
