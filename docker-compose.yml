@@ -47,3 +47,4 @@ services:
       - 514:514/udp
     networks:
       - elastic
+volumes:
