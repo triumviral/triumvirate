@@ -51,3 +51,4 @@ volumes:
   esdata:
     driver: local
   kbdata:
+    driver: local
