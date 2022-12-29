@@ -43,3 +43,4 @@ services:
     volumes:
       - ./cfg/elastic/logstash/pipeline/:/usr/share/logstash/pipeline/
     ports:
+      - 4560:4560/tcp
