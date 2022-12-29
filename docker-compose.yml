@@ -23,3 +23,4 @@ services:
     networks:
       - elastic
   kibana:
+    image: docker.elastic.co/kibana/kibana:8.5.3
