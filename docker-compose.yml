@@ -52,3 +52,4 @@ volumes:
     driver: local
   kbdata:
     driver: local
+networks:
