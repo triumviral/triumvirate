@@ -2,5 +2,7 @@
     <import class="ch.qos.logback.core.FileAppender"/>
     <variable resource="log/logback/appender/file/file.properties"/>
     <appender name="${file.appender.name}" class="FileAppender">
+        <encoder>
+        </encoder>
     </appender>
 </included>
