@@ -1,3 +1,8 @@
 <configuration>
     <variable resource="log/logback/logback.properties"/>
+    <if condition='property("root").contains("async")'>
+        <then>
+            <include resource="log/logback/appender/async/async.xml"/>
+        </then>
+    </if>
 </configuration>
