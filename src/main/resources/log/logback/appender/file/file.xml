@@ -9,6 +9,7 @@
         </filter>
         <filter class="EvaluatorFilter">
             <evaluator>
+                <expression>${file.appender.filter.evaluator.expression}</expression>
             </evaluator>
         </filter>
         <encoder>
