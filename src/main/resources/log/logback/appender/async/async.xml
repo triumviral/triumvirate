@@ -11,6 +11,7 @@
         </then>
     </if>
     <appender name="${async.appender.name}" class="LoggingEventAsyncDisruptorAppender">
+        <appender-ref ref="${async.appender.appender-ref.ref}"/>
     </appender>
     <if condition='property("root").contains("${async.appender.name}")'>
         <then>
