@@ -35,3 +35,4 @@ services:
       - elastic
   logstash:
     image: docker.elastic.co/logstash/logstash:8.5.3
+    container_name: logstash
