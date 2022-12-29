@@ -27,3 +27,4 @@ services:
     container_name: kibana
     depends_on:
       - elasticsearch
+    volumes:
