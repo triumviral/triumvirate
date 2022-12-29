@@ -7,4 +7,11 @@
         </encoder>
         <file>${file.appender.file}</file>
     </appender>
+    <if condition='property("root").contains("${file.appender.name}")'>
+        <then>
+            <root>
+                <appender-ref ref="${file.appender.name}"/>
+            </root>
+        </then>
+    </if>
 </included>
