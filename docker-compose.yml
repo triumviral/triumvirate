@@ -22,3 +22,4 @@ services:
       - 9300:9300
     networks:
       - elastic
+  kibana:
