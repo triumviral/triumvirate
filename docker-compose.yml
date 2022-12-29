@@ -44,3 +44,4 @@ services:
       - ./cfg/elastic/logstash/pipeline/:/usr/share/logstash/pipeline/
     ports:
       - 4560:4560/tcp
+      - 514:514/udp
