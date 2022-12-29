@@ -8,6 +8,8 @@
             <level>${file.appender.filter.level}</level>
         </filter>
         <filter class="EvaluatorFilter">
+            <evaluator>
+            </evaluator>
         </filter>
         <encoder>
             <pattern>%msg%n</pattern>
