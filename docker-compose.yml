@@ -28,3 +28,4 @@ services:
     depends_on:
       - elasticsearch
     volumes:
+      - kbdata:/usr/share/kibana/data
