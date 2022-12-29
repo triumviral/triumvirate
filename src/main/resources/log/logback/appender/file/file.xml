@@ -13,7 +13,7 @@
             </evaluator>
         </filter>
         <encoder>
-            <pattern>%msg%n</pattern>
+            <pattern>${file.appender.encoder.pattern}</pattern>
         </encoder>
         <file>${file.appender.file}</file>
     </appender>
