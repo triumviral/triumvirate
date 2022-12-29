@@ -1,3 +1,7 @@
 <included>
     <variable resource="log/logback/appender/async/async.properties"/>
+    <if condition='!property("root").contains("async.appender.appender-ref.ref")'>
+        <then>
+        </then>
+    </if>
 </included>
