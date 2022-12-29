@@ -31,3 +31,4 @@ services:
       - kbdata:/usr/share/kibana/data
     ports:
       - 5601:5601
+    networks:
