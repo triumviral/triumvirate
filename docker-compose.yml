@@ -45,3 +45,4 @@ services:
     ports:
       - 4560:4560/tcp
       - 514:514/udp
+    networks:
