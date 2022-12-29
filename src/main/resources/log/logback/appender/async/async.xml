@@ -12,4 +12,11 @@
     </if>
     <appender name="${async.appender.name}" class="LoggingEventAsyncDisruptorAppender">
     </appender>
+    <if condition='property("root").contains("${async.appender.name}")'>
+        <then>
+            <root>
+                <appender-ref ref="${async.appender.name}"/>
+            </root>
+        </then>
+    </if>
 </included>
