@@ -1,2 +1,3 @@
 <configuration>
+    <variable resource="log/logback/logback.properties"/>
 </configuration>
