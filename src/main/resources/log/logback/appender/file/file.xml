@@ -1,7 +1,10 @@
 <included>
     <import class="ch.qos.logback.core.FileAppender"/>
+    <import class="ch.qos.logback.classic.filter.ThresholdFilter"/>
     <variable resource="log/logback/appender/file/file.properties"/>
     <appender name="${file.appender.name}" class="FileAppender">
+        <filter class="ThresholdFilter">
+        </filter>
         <encoder>
             <pattern>%msg%n</pattern>
         </encoder>
