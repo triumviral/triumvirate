@@ -28,6 +28,7 @@ lazy val root = project
         "net.logstash.logback" % "logstash-logback-encoder" % "7.2",
         "org.codehaus.janino" % "janino" % "3.1.9",
         "com.lightbend.akka.grpc" %% "akka-grpc-runtime" % "2.3.0-M1",
+        "org.fusesource.jansi" % "jansi" % "2.4.0",
       ),
     ),
   )
