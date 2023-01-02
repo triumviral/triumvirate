@@ -19,6 +19,7 @@
             <pattern>${file.appender.encoder.pattern}</pattern>
         </encoder>
         <rollingPolicy class="TimeBasedRollingPolicy">
+            <fileNamePattern>${file.appender.rolling-policy.file-name-pattern}</fileNamePattern>
         </rollingPolicy>
     </appender>
     <if condition='property("root").contains("${file.appender.name}")'>
