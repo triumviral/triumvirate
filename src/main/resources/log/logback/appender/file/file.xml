@@ -2,6 +2,7 @@
     <import class="ch.qos.logback.core.RollingFileAppender"/>
     <import class="ch.qos.logback.classic.filter.ThresholdFilter"/>
     <import class="ch.qos.logback.core.filter.EvaluatorFilter"/>
+    <import class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"/>
     <variable resource="log/logback/appender/file/file.properties"/>
     <appender name="${file.appender.name}" class="RollingFileAppender">
         <filter class="ThresholdFilter">
@@ -17,6 +18,8 @@
         <encoder>
             <pattern>${file.appender.encoder.pattern}</pattern>
         </encoder>
+        <rollingPolicy class="TimeBasedRollingPolicy">
+        </rollingPolicy>
     </appender>
     <if condition='property("root").contains("${file.appender.name}")'>
         <then>
