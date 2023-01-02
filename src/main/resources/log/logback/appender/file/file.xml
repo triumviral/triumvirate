@@ -5,6 +5,7 @@
     <import class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"/>
     <variable resource="log/logback/appender/file/file.properties"/>
     <appender name="${file.appender.name}" class="RollingFileAppender">
+        <withJansi>${file.appender.with-jansi}</withJansi>
         <filter class="ThresholdFilter">
             <level>${file.appender.filter.level}</level>
         </filter>
