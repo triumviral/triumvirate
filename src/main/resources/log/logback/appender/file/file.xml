@@ -1,5 +1,5 @@
 <included>
-    <import class="ch.qos.logback.core.RollingFileAppender"/>
+    <import class="ch.qos.logback.core.rolling.RollingFileAppender"/>
     <import class="ch.qos.logback.classic.filter.ThresholdFilter"/>
     <import class="ch.qos.logback.core.filter.EvaluatorFilter"/>
     <import class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy"/>
