@@ -17,7 +17,6 @@
         <encoder>
             <pattern>${file.appender.encoder.pattern}</pattern>
         </encoder>
-        <file>${file.appender.file}</file>
     </appender>
     <if condition='property("root").contains("${file.appender.name}")'>
         <then>
