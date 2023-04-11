@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/google-protobuf": "^3.15.6",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "fork-ts-checker-webpack-plugin": "^7.2.14",
+    "postcss": "^8.4.20",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^7.8.3",
+    "style-loader": "^3.3.1",
+    "tailwindcss": "^3.2.4",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "google-protobuf": "^3.21.2",
+    "grpc-web": "^1.4.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

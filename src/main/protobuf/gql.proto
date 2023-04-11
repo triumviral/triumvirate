@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "serv.service.grpc";
+option java_outer_classname = "GraphQLProto";
+
+package gql;
+
+service GraphQLService {
+  rpc Query (QueryRequest) returns (QueryResponse) {}
+}
+
+message QueryRequest {
+  string request = 1;
+}
+
+message QueryResponse {
+  string data = 1;
+}

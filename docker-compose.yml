@@ -1,57 +1,72 @@
 services:
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_VERSION}
-    container_name: elasticsearch
+  # elasticsearch:
+  #   image: docker.elastic.co/elasticsearch/elasticsearch:${ELASTIC_VERSION}
+  #   container_name: elasticsearch
+  #   environment:
+  #     - discovery.type=single-node
+  #     - bootstrap.memory_lock=true
+  #     - xpack.security.enabled=false
+  #     - xpack.security.enrollment.enabled=false
+  #     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  #   ulimits:
+  #     memlock:
+  #       soft: -1
+  #       hard: -1
+  #     nofile:
+  #       soft: 65536
+  #       hard: 65536
+  #   volumes:
+  #     - esdata:/usr/share/elasticsearch/data
+  #   ports:
+  #     - 9200:9200
+  #     - 9300:9300
+  #   networks:
+  #     - elastic
+  # kibana:
+  #   image: docker.elastic.co/kibana/kibana:${ELASTIC_VERSION}
+  #   container_name: kibana
+  #   depends_on:
+  #     - elasticsearch
+  #   volumes:
+  #     - kbdata:/usr/share/kibana/data
+  #   ports:
+  #     - 5601:5601
+  #   networks:
+  #     - elastic
+  # logstash:
+  #   image: docker.elastic.co/logstash/logstash:${ELASTIC_VERSION}
+  #   container_name: logstash
+  #   depends_on:
+  #     - elasticsearch
+  #   environment:
+  #     - "LS_JAVA_OPTS=-Xms512m -Xmx512m"
+  #   volumes:
+  #     - ./cfg/elastic/logstash/pipeline/:/usr/share/logstash/pipeline/
+  #   ports:
+  #     - 4560:4560/tcp
+  #     - 514:514/udp
+  #   networks:
+  #     - elastic
+  envoy:
+    image: envoyproxy/envoy:v1.24.1
+    container_name: envoy
     environment:
-      - discovery.type=single-node
-      - bootstrap.memory_lock=true
-      - xpack.security.enabled=false
-      - xpack.security.enrollment.enabled=false
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-      nofile:
-        soft: 65536
-        hard: 65536
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
+      - "ENVOY_UID=777"
+      - "ENVOY_GID=777"
     ports:
-      - 9200:9200
-      - 9300:9300
-    networks:
-      - elastic
-  kibana:
-    image: docker.elastic.co/kibana/kibana:${ELASTIC_VERSION}
-    container_name: kibana
-    depends_on:
-      - elasticsearch
+      - 8081:8081
+      - 9901:9901
+      - 10000:10000
     volumes:
-      - kbdata:/usr/share/kibana/data
-    ports:
-      - 5601:5601
-    networks:
-      - elastic
-  logstash:
-    image: docker.elastic.co/logstash/logstash:${ELASTIC_VERSION}
-    container_name: logstash
-    depends_on:
-      - elasticsearch
-    environment:
-      - "LS_JAVA_OPTS=-Xms512m -Xmx512m"
-    volumes:
-      - ./cfg/elastic/logstash/pipeline/:/usr/share/logstash/pipeline/
-    ports:
-      - 4560:4560/tcp
-      - 514:514/udp
-    networks:
-      - elastic
-volumes:
-  esdata:
-    driver: local
-  kbdata:
-    driver: local
-networks:
-  elastic:
-    driver: bridge
+      - ./cfg/proxy/envoy/envoy.yaml:/etc/envoy/envoy.yaml
+      - ./log/envoy/:/var/log
+#    extra_hosts:
+#      - "host.docker.internal:host-bridge"
+# volumes:
+#   esdata:
+#     driver: local
+#   kbdata:
+#     driver: local
+# networks:
+#   elastic:
+#     driver: bridge
